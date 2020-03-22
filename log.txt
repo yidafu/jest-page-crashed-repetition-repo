@@ -1,0 +1,33 @@
+yarn run v1.22.4
+$ jest
+  console.error node_modules/jest-jasmine2/build/jasmine/Env.js:248
+    Unhandled error
+
+  console.error node_modules/jest-jasmine2/build/jasmine/Env.js:249
+    Error: Page crashed!
+        at Page._onTargetCrashed (/mnt/d/Project/jest-page-closed/node_modules/puppeteer/lib/Page.js:213:24)
+        at CDPSession.<anonymous> (/mnt/d/Project/jest-page-closed/node_modules/puppeteer/lib/Page.js:122:56)
+        at CDPSession.emit (events.js:311:20)
+        at CDPSession._onMessage (/mnt/d/Project/jest-page-closed/node_modules/puppeteer/lib/Connection.js:200:12)
+        at Connection._onMessage (/mnt/d/Project/jest-page-closed/node_modules/puppeteer/lib/Connection.js:112:17)
+        at WebSocket.<anonymous> (/mnt/d/Project/jest-page-closed/node_modules/puppeteer/lib/WebSocketTransport.js:44:24)
+        at WebSocket.onMessage (/mnt/d/Project/jest-page-closed/node_modules/ws/lib/event-target.js:120:16)
+        at WebSocket.emit (events.js:311:20)
+        at Receiver.receiverOnMessage (/mnt/d/Project/jest-page-closed/node_modules/ws/lib/websocket.js:789:20)
+        at Receiver.emit (events.js:311:20)
+
+ FAIL  ./demo.spec.ts
+  ● Test suite failed to run
+
+    Protocol error: Connection closed. Most likely the page has been closed.
+
+      at assert (node_modules/puppeteer/lib/helper.js:283:11)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        32.445s
+Ran all test suites.
+Jest did not exit one second after the test run has completed.
+
+This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.

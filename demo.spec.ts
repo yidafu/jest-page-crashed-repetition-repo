@@ -27,6 +27,23 @@ describe('Bing', () => {
     console.log('after goto')
   })
 
+  beforeEach(async () => {
+    await jestPuppeteer.resetPage();
+  });
+
+  it('should display "Bing" text on page', async () => {
+    console.log('before assert')
+    await expect(page).toMatch('Bing')
+    console.log('after assert')
+  })
+
+  
+  it('should display "Bing" text on page', async () => {
+    console.log('before assert')
+    await expect(page).toMatch('Bing')
+    console.log('after assert')
+  })
+  
   it('should display "Bing" text on page', async () => {
     console.log('before assert')
     await expect(page).toMatch('Bing')
